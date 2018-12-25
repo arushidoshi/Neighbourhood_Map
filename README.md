@@ -1,4 +1,4 @@
-# Item Catalog
+# Neighbourhood Map
 submitted by [Arushi Doshi](https://github.com/arushidoshi), for completing the sixth project of:
 [Full-Stack Web Developer Nanodegree](https://www.udacity.com/course/nd004)
 
