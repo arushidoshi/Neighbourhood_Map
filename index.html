@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+      <title>Neighbourhood Map</title>
+
+      <meta name="viewport" content="width=device-width">
+      <meta charset="utf-8">
+      <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <link rel="stylesheet" href="css/styles.css" type="text/css">
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-4 col-md-4 bordered">
+
+          <h1 id="sidebar-header"><img src="img/book-banner.png" width="100px" height="100"></br>Paper Towns</br>... most popular books per city!</h1>
+
+          <input id="my-input" class="form-control" type="text" placeholder="Search here..." name="filter" data-bind="textInput: filter">
+
+          <nav>
+            <ul id="sidebar-list" class="list-group" data-bind="foreach: filterLoc">
+              <li class="list-group-item" data-bind="text: title, click:$parent.getMarker.bind(title)" autocomplete="on"></li>
+            </ul>
+          </nav>
+          <div class="footer"><h6>Disclaimer: All opinions displayed here are my own and not backed by statistics.</h6>
+            
+          </div>
+        </div>
+        <div class="col-sm-8" id="map-column">
+          <div id='map'>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="js/knockout-3.4.2.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/map.js"></script>
+    <script type="text/javascript" src="js/binding.js"></script>
+
+    <script>
+      function googleMapsError() {
+        alert("Google Maps failed to load. Please reload the page or check your internet connection!");
+      }
+    </script>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7e9n7NT5SgilHOYEZKQ4MNCsxyxvE4oU&v=3&callback=initMap">
+    </script>
+
+  </body>
+</html>
