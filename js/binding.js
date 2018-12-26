@@ -1,3 +1,6 @@
+// Whole-script strict mode syntax
+"use strict";
+
 // Marker object consisting of title and marker.
 var Marker = function(data) {
 	this.title = ko.observable(data.title);
@@ -32,7 +35,7 @@ var ViewModel = function() {
 				return self.markerList();
 			} else {
 				return ko.utils.arrayFilter(self.markerList(), function(item) {
-					var result = compareStrings(item.title().toLowerCase(), filter);
+					var result = item.title().toLowerCase().startsWith(filter);
 					if (result) {
 						if (item.marker) {  // Set all markers in result to visible.
 							item.marker.setVisible(true);
@@ -49,15 +52,6 @@ var ViewModel = function() {
 			return self.markerList();
 		}
 	});
-};
-
-// Function to compare 2 strings and check if they are the same.
-var compareStrings = function (string1, string2) {
-	string1 = string1 || "";
-	if (string2.length > string1.length) {
-		return false;
-	}
-	return string1.substring(0, string2.length) === string2;
 };
 
 // Creating ViewModel and applying bindings.

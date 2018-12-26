@@ -28,9 +28,11 @@ Download a browser with Javascript enabled e.g. [Google Chrome](https://www.goog
 
 ## Instructions
 
-1. Download [this](https://github.com/arushidoshi/Neighbourhood_Map/) repository.
-2. Go into the folder and open `index.html` in web browser.
-3. Interact with the elements for expected outcomes.
+- To run view the final result click [here]()
+- To run the project locally on your machine:
+  1. Download [this](https://github.com/arushidoshi/Neighbourhood_Map/) repository.
+  2. Go into the folder and open `index.html` in web browser.
+  3. Interact with the elements for expected outcomes.
 
 ## Expected Outcomes
 - Users can view most popular books across all locations
