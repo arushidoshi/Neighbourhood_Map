@@ -28,7 +28,7 @@ Download a browser with Javascript enabled e.g. [Google Chrome](https://www.goog
 
 ## Instructions
 
-- To run view the final result click [here]()
+- To view the final result online, click [here](https://arushidoshi.github.io/Neighbourhood_Map/)
 - To run the project locally on your machine:
   1. Download [this](https://github.com/arushidoshi/Neighbourhood_Map/) repository.
   2. Go into the folder and open `index.html` in web browser.
